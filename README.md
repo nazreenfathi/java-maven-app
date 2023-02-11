@@ -7,3 +7,5 @@ try push
 freestyle trying
 
 try maven job
+
+again try freestyle job
