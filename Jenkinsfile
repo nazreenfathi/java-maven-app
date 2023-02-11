@@ -22,7 +22,7 @@ pipeline{
         stage('sonarqube analysis'){
             steps{
                 withSonarQubeEnv("SonarQube") {
-                        sh "${tool("sonarQube Scanner 4.8")}/bin/sonar-scanner \
+                        sh "${tool("sonarQube")}/bin/sonar-scanner \
                         -Dsonar.projectKey=java-maven-app \
                         -Dsonar.java.binaries=target \
                         -Dsonar.host.url=http://44.203.21.133:9000/ \
