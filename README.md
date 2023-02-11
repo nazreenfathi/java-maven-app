@@ -5,4 +5,3 @@ This is added for automated CI
 try push
 
 
-try freestyle job.
