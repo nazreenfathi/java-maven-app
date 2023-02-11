@@ -11,3 +11,5 @@ try maven job
 try freestyle job
 
 again try freestyle job
+
+try demo job
