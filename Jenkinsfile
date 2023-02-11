@@ -1,12 +1,22 @@
 pipeline{
     agent any
 
+    tools {
+        maven 'maven_3.9.0'       
+    }
+
     stages{
         stage('git Checkout'){
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'git credentials', url: 'https://github.com/nazreenfathi/java-maven-app.git']])
             }
             
+        }
+
+        stage('maven build'){
+            steps{
+                sh 'mvn clean install'
+            }
         }
         
         stage('sonarqube analysis'){
