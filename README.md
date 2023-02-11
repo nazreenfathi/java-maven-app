@@ -6,5 +6,4 @@ try push
 
 freestyle trying
 
-
-trying maven job
+try maven job
